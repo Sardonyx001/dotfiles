@@ -1,0 +1,54 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Set longer command timeout 
+command_timeout = 50
+
+format = """
+[ ](fg:#a3aed2)\
+$username\
+$hostname\
+$all\
+"""
+
+[shell]
+fish_indicator = '󰈺'
+powershell_indicator = '_'
+unknown_indicator = 'mystery shell'
+style = 'cyan bold'
+disabled = true
+
+[username]
+style_user = 'white bold'
+style_root = 'black bold'
+format = '[$user]($style)'
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol](bold blue)[@](bold dark-gray)[$hostname](bold white) '
+disabled = false
+
+[time]
+disabled = true
+format = '🕙[\[ $time \]]($style) '
+time_format = '%T'
+
+[directory]
+truncation_length = 8
+fish_style_pwd_dir_length = 8
+
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red)'
+
+[nodejs]
+disabled = true
+
+[aws]
+disabled = true

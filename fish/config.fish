@@ -61,8 +61,5 @@ set --universal --export CHARM_HOST jamell.dev
 test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
 
 
-# Set Bitwarden CLI Session
-set --universal --export BW_SESSION "O0n+kpM2UzUnIHLAh14VO0Ka9Sin6MrdlZ/+m0rcpDioalue4PH7PsOqP/qU94k3c8jItLGlL5BrjTQMxE6ANQ=="
-
 # Keep at the bottom
 starship init fish | source

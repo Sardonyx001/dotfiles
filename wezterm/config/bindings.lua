@@ -8,6 +8,7 @@ local mod = {}
 if platform.is_mac then
    mod.SUPER = 'SUPER'
    mod.SUPER_REV = 'SUPER|CTRL'
+   mod.ALT = 'ALT'
 elseif platform.is_win or platform.is_linux then
    mod.SUPER = 'ALT' -- to not conflict with Windows key shortcuts
    mod.SUPER_REV = 'ALT|CTRL'
@@ -55,7 +56,9 @@ local keys = {
 
    -- copy/paste --
    { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
+   { key = 'c',          mods = 'SUPER',  action = act.CopyTo('Clipboard') },
    { key = 'v',          mods = 'CTRL|SHIFT',  action = act.PasteFrom('Clipboard') },
+   { key = 'v',          mods = 'SUPER',  action = act.PasteFrom('Clipboard') },
 
    -- tabs --
    -- tabs: spawn+close
@@ -191,7 +194,7 @@ local mouse_bindings = {
 
 return {
    disable_default_key_bindings = true,
-   leader = { key = 'Space', mods = mod.SUPER_REV },
+   leader = { key = 'Space', mods = 'ALT' },
    keys = keys,
    key_tables = key_tables,
    mouse_bindings = mouse_bindings,

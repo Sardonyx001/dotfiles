@@ -118,7 +118,7 @@ Most of the key bindings revolve around a <kbd>SUPER</kbd> and <kbd>SUPER_REV</k
 > To avoid confusion when switching between different OS and to avoid conflicting<br>
 > with OS's built-in keyboard shortcuts.
 
-- On all platforms: <kbd>LEADER</kbd> ⇨ <kbd>SUPER_REV</kbd>+<kbd>Space</kbd>
+- On all platforms: <kbd>LEADER</kbd> ⇨ <kbd>ALT</kbd>+<kbd>Space</kbd>
 
 #### Miscellaneous/Useful
 

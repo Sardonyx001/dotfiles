@@ -48,6 +48,8 @@ local keys = {
          end),
       }),
    },
+   -- Add backslash support on mac for OPT+¥ --
+   { key = "¥", mods = "ALT", action = wezterm.action({ SendString = "\\" }) },
 
    -- cursor movement --
    { key = 'LeftArrow',  mods = mod.SUPER,     action = act.SendString '\x1bOH' },

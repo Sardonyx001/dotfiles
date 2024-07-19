@@ -269,3 +269,4 @@ abbr dln docker ps -l --format='{{.Names}}'
 abbr cl clear
 abbr act act --container-architecture linux/amd64
 abbr lg lazygit
+abbr pc pre-commit

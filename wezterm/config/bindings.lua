@@ -142,6 +142,9 @@ local keys = {
       mods = mod.SUPER_REV,
       action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }),
    },
+   -- panes: rotation
+   { key = '[', mods = mod.SUPER_REV, action = act.RotatePanes('Clockwise') },
+   { key = ']', mods = mod.SUPER_REV, action = act.RotatePanes('CounterClockwise') },
 
    -- key-tables --
    -- resizes fonts

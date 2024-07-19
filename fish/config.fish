@@ -2,9 +2,6 @@
 # if status is-interactive
 # end
 
-# ------------  THEMES ------------------#
-# Set up starship theme
-
 # ------------  Virtual Environment ------#
 # Set up Java virtual environment (jenv)
 # status --is-interactive; and jenv init - | source
@@ -13,6 +10,7 @@
 if [ -f $HOME/.config/fish/alias.fish ]
     source $HOME/.config/fish/alias.fish
 end
+
 
 # Bind ranger's current directory to shell env
 bind \co ranger-cd
@@ -27,8 +25,7 @@ end
 # pnpm end
 
 # bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+set -gx BUN_INSTALL "$HOME/.bun"
 
 # zoxide (`z`) 
 zoxide init fish | source
@@ -46,16 +43,18 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 fish_add_path /Users/jam/.spicetify
 
 # Don't build docker images with macos architecture
-set --universal --export DOCKER_DEFAULT_PLATFORM linux/amd64
-set --universal --export DOCKER_SCAN_SUGGEST false
+set -gx DOCKER_DEFAULT_PLATFORM linux/amd64
+set -gx DOCKER_SCAN_SUGGEST false
 
 # Set neovim as default editor
-set --universal --export EDITOR nvim
-set --universal --export HOMEBREW_EDITOR code
-set --universal --export BAT_PAGER "ov --quit-if-one-screen -F -H3"
-set --universal --export BAT_THEME gruvbox-dark
-set --universal --export ANDROID_NDK_HOME /opt/homebrew/share/android-ndk
-set --universal --export CHARM_HOST jamell.dev
+set -gx EDITOR nvim
+set -gx HOMEBREW_EDITOR code
+set -gx BAT_PAGER "ov --quit-if-one-screen -F -H3"
+set -gx BAT_THEME gruvbox-dark
+set -gx ANDROID_NDK_HOME /opt/homebrew/share/android-ndk
+set -gx CHARM_HOST "jamell.dev"
+set -gx GPG_TTY (tty)
+set -Ux GOPATH (go env GOPATH)
 
 # Generated for envman. Do not edit.
 test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish

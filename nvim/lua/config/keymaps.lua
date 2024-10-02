@@ -16,3 +16,6 @@ map("n", "<leader>L", "<cmd>Legendary<cr>", { desc = "Open Legendary" })
 map({ "n", "v" }, "¥", "$", { desc = "End of line" })
 
 map({ "n", "v" }, "^", "$", { desc = "End of line" })
+
+-- Jump inside tag (like html tags)
+map("n", "<leader>jt", "vit<Esc>`>", { desc = "Jump inside a tag", noremap = true, silent = true })

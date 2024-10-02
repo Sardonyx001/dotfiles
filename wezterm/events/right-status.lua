@@ -65,6 +65,11 @@ local _set_date = function()
    _push(date, nf.fa_calendar, colors.date_fg, colors.date_bg, true)
 end
 
+local _set_something = function()
+   local test = 'hi:)'
+   _push(test, nf.md_battery_charging, colors.battery_fg, colors.battery_bg, true)
+end
+
 local _set_battery = function()
    -- ref: https://wezfurlong.org/wezterm/config/lua/wezterm/battery_info.html
 
@@ -88,9 +93,9 @@ end
 M.setup = function()
    wezterm.on('update-right-status', function(window, _pane)
       __cells__ = {}
+      _set_something()
       _set_date()
       _set_battery()
-
       window:set_right_status(wezterm.format(__cells__))
    end)
 end

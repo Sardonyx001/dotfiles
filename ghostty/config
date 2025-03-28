@@ -1,0 +1,75 @@
+
+working-directory = home
+shell-integration = fish
+
+
+# clipboard
+copy-on-select = clipboard
+clipboard-trim-trailing-spaces = true
+clipboard-read = allow
+clipboard-write = allow
+
+window-theme = dark
+background-opacity = 0.75
+background-blur-radius = 12
+theme = catppuccin-macchiato
+font-family = "JetBrainsMono Nerd Font"
+font-size = 16
+
+# mouse
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+# behavior
+auto-update = check
+auto-update-channel = stable
+quit-after-last-window-closed = true
+shell-integration-features = true
+
+# macos
+macos-option-as-alt = true
+macos-titlebar-style = transparent
+
+# theme
+minimum-contrast = 2
+background = #24273a
+foreground = #cad3f5
+selection-background = #5b6078
+selection-foreground = #cad3f5
+cursor-color = #f4dbd6
+cursor-opacity = 0.75
+palette = 0=#494d64
+palette = 1=#ed8796
+palette = 2=#a6da95
+palette = 3=#eed49f
+palette = 4=#8aadf4
+palette = 5=#f5bde6
+palette = 6=#8bd5ca
+palette = 7=#a5adcb
+palette = 8=#5b6078
+palette = 9=#ec7486
+palette = 10=#8ccf7f
+palette = 11=#e1c682
+palette = 12=#78a1f6
+palette = 13=#f2a9dd
+palette = 14=#63cbc0
+palette = 15=#b8c0e0
+
+# keybinds
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+
+# Tab management
+keybind = super+left_bracket=previous_tab
+keybind = super+right_bracket=next_tab
+keybind = super+shift+left_bracket=move_tab:-1
+keybind = super+shift+right_bracket=move_tab:1
+
+# Pane (split) management
+keybind = super+¥=new_split:right
+keybind = super+ctrl+¥=new_split:down
+keybind = super+enter=toggle_split_zoom
+keybind = super+ctrl+h=goto_split:left
+keybind = super+ctrl+j=goto_split:bottom
+keybind = super+ctrl+k=goto_split:top
+keybind = super+ctrl+l=goto_split:right

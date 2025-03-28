@@ -3,6 +3,7 @@
 SETUVAR --export ANDROID_NDK_HOME:/opt/homebrew/share/android\x2dndk
 SETUVAR --export BAT_PAGER:ov\x20\x2d\x2dquit\x2dif\x2done\x2dscreen\x20\x2dF\x20\x2dH3
 SETUVAR --export BAT_THEME:gruvbox\x2ddark
+SETUVAR --export BW_SESSION:O0n\x2bkpM2UzUnIHLAh14VO0Ka9Sin6MrdlZ/\x2bm0rcpDioalue4PH7PsOqP/qU94k3c8jItLGlL5BrjTQMxE6ANQ\x3d\x3d
 SETUVAR --export CHARM_HOST:jamell\x2edev
 SETUVAR --export DOCKER_DEFAULT_PLATFORM:linux/amd64
 SETUVAR --export DOCKER_SCAN_SUGGEST:false
@@ -26,6 +27,7 @@ SETUVAR --export EZA_LO_OPTIONS:\x2d\x2doneline
 SETUVAR --export EZA_LT_OPTIONS:\x2d\x2dtree\x1e\x2d\x2dlevel
 SETUVAR --export EZA_L_OPTIONS:\x1d
 SETUVAR --export EZA_STANDARD_OPTIONS:\x2d\x2dgroup\x1e\x2d\x2dheader\x1e\x2d\x2dgroup\x2ddirectories\x2dfirst
+SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2dH\x20\x2dE\x20\x27\x2egit\x27
 SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
 SETUVAR FZF_DISABLE_KEYBINDINGS:0
 SETUVAR FZF_LEGACY_KEYBINDINGS:1
@@ -34,24 +36,41 @@ SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR --export --path GOPATH:/Users/jam/go
 SETUVAR --export HOMEBREW_EDITOR:code
-SETUVAR --export PAGER:ov
+SETUVAR --export PAGER:nvimpager
+SETUVAR --export PYENV_ROOT:/Users/jam/\x2epyenv
+SETUVAR --export VISUAL:nvim
 SETUVAR --export __FISH_EZA_ALIASES:l\x1ela\x1eld\x1eli\x1elid\x1elaa\x1elad\x1elai\x1elaid\x1elaad\x1elaai\x1elaaid\x1ell\x1ella\x1elld\x1elli\x1ellid\x1ellaa\x1ellad\x1ellai\x1ellaid\x1ellaad\x1ellaai\x1ellaaid\x1elg\x1elga\x1elgd\x1elgi\x1elgid\x1elgaa\x1elgad\x1elgai\x1elgaid\x1elgaad\x1elgaai\x1elgaaid\x1ele\x1elea\x1eled\x1elei\x1eleid\x1eleaa\x1elead\x1eleai\x1eleaid\x1eleaad\x1eleaai\x1eleaaid\x1elt\x1elta\x1eltd\x1elti\x1eltid\x1eltad\x1eltai\x1eltaid\x1eltaad\x1eltaai\x1eltaaid\x1elc\x1elca\x1elcd\x1elci\x1elcid\x1elcaa\x1elcad\x1elcai\x1elcaid\x1elcaad\x1elcaai\x1elcaaid\x1elo\x1eloa\x1elod\x1eloi\x1eloid\x1eloaa\x1eload\x1eloai\x1eloaid\x1eloaad\x1eloaai\x1eloaaid
 SETUVAR --export __FISH_EZA_BASE_ALIASES:l\x1ell\x1elg\x1ele\x1elt\x1elc\x1elo
 SETUVAR --export __FISH_EZA_EXPANDED:a\x1ed\x1ei\x1eid\x1eaa\x1ead\x1eai\x1eaid\x1eaad\x1eaai\x1eaaid
 SETUVAR --export __FISH_EZA_EXPANDED_OPT_NAME:LA\x1eLD\x1eLI\x1eLID\x1eLAA\x1eLAD\x1eLAI\x1eLAID\x1eLAAD\x1eLAAI\x1eLAAID
 SETUVAR --export __FISH_EZA_OPT_NAMES:EZA_L_OPTIONS\x1eEZA_LA_OPTIONS\x1eEZA_LD_OPTIONS\x1eEZA_LI_OPTIONS\x1eEZA_LID_OPTIONS\x1eEZA_LAA_OPTIONS\x1eEZA_LAD_OPTIONS\x1eEZA_LAI_OPTIONS\x1eEZA_LAID_OPTIONS\x1eEZA_LAAD_OPTIONS\x1eEZA_LAAI_OPTIONS\x1eEZA_LAAID_OPTIONS\x1eEZA_LL_OPTIONS\x1eEZA_LG_OPTIONS\x1eEZA_LE_OPTIONS\x1eEZA_LT_OPTIONS\x1eEZA_LC_OPTIONS\x1eEZA_LO_OPTIONS
 SETUVAR --export __FISH_EZA_SORT_OPTIONS:name\x1e\x2ename\x1esize\x1eext\x1emod\x1eold\x1eacc\x1ecr\x1einode
+SETUVAR __done_exclude:\x5egit\x20\x28\x3f\x21push\x7cpull\x7cfetch\x29
+SETUVAR __done_min_cmd_duration:5000
+SETUVAR __done_notify_sound:1
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_franciscolourenco_2F_done_files:\x7e/\x2econfig/fish/conf\x2ed/done\x2efish
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fishtape_files:\x7e/\x2econfig/fish/functions/fishtape\x2efish\x1e\x7e/\x2econfig/fish/completions/fishtape\x2efish
+SETUVAR _fisher_jorgebucaran_2F_hydro_files:\x7e/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/hydro\x2efish
 SETUVAR _fisher_jorgebucaran_2F_spark_2E_fish_files:\x7e/\x2econfig/fish/functions/spark\x2efish\x1e\x7e/\x2econfig/fish/completions/spark\x2efish
 SETUVAR _fisher_laughedelic_2F_brew_2D_completions_files:\x7e/\x2econfig/fish/completions/brew\x2efish
 SETUVAR _fisher_laughedelic_2F_fish__logo_files:\x7e/\x2econfig/fish/functions/fish_logo\x2efish\x1e\x7e/\x2econfig/fish/completions/fish_logo\x2efish
 SETUVAR _fisher_plttn_2F_fish_2D_eza_files:\x7e/\x2econfig/fish/functions/eza_git\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fish\x2deza\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eplttn/fish\x2deza\x1ejorgebucaran/autopair\x2efish\x1ejorgebucaran/spark\x2efish\x1elaughedelic/fish_logo\x1elaughedelic/brew\x2dcompletions\x1ejorgebucaran/fishtape\x1esardonyx001/pb\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eplttn/fish\x2deza\x1ejorgebucaran/autopair\x2efish\x1ejorgebucaran/spark\x2efish\x1elaughedelic/fish_logo\x1elaughedelic/brew\x2dcompletions\x1ejorgebucaran/fishtape\x1esardonyx001/pb\x2efish\x1ejorgebucaran/hydro\x1efranciscolourenco/done
 SETUVAR _fisher_sardonyx001_2F_pb_2E_fish_files:\x7e/\x2econfig/fish/functions/pb\x2efish\x1e\x7e/\x2econfig/fish/completions/pb\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR _hydro_git_11770:feature/add\x2dmodule\u2022\x20
+SETUVAR _hydro_git_1266:main\x20
+SETUVAR _hydro_git_23388:feat/add\x2dopt\x2dinput\x2dcomponents\u2022\x20
+SETUVAR _hydro_git_24590:jamel/feat/initial\u2022\x20
+SETUVAR _hydro_git_38325:jamel/fix/report\x2dgeneration\x2dmissing\x2ddata\u2022\x20
+SETUVAR _hydro_git_6539:refact/components\x20
+SETUVAR _hydro_git_77496:main\x20
+SETUVAR _hydro_git_79150:main\x20
+SETUVAR _hydro_git_82405:refact/components\u2022\x20
+SETUVAR _hydro_git_9109:feature/add\x2dmodule\u2022\x20
 SETUVAR fish_color_autosuggestion:6272a4
 SETUVAR fish_color_cancel:ff5555\x1e\x2d\x2dreverse
 SETUVAR fish_color_command:8be9fd
@@ -77,6 +96,7 @@ SETUVAR fish_color_selection:\x2d\x2dbackground\x3d44475a
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:8be9fd
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_greeting:\x1d
 SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_pager_color_background:\x1d
 SETUVAR fish_pager_color_completion:f8f8f2
@@ -91,7 +111,7 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3d44475a
 SETUVAR fish_pager_color_selected_completion:f8f8f2
 SETUVAR fish_pager_color_selected_description:6272a4
 SETUVAR fish_pager_color_selected_prefix:8be9fd
-SETUVAR fish_user_paths:/Users/jam/Library/Python/3\x2e12/bin\x1e/Users/jam/\x2ebun/bin\x1e/opt/homebrew/opt/ssh\x2dcopy\x2did/bin\x1e/Users/jam/\x2espicetify\x1e/Users/jam/go/bin\x1e/Users/jam/go\x1e/opt/homebrew/opt/postgresql\x4015/bin\x1e/opt/homebrew/sbin\x1e/opt/homebrew/opt/openjdk/bin\x1e/opt/homebrew/opt/openjdk\x4011/bin\x1e/Users/jam/\x2ecargo/bin\x1e/Users/jam/Library/Android/Sdk/emulator\x1e/Users/jam/Library/Android/Sdk/platform\x2dtools\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/fzf/bin
+SETUVAR fish_user_paths:/opt/homebrew/opt/node\x4022/bin\x1e/opt/homebrew/opt/node\x4018/bin\x1e/Users/jam/\x2edeno/bin\x1e/Users/jam/Library/pnpm\x1e/Users/jam/\x2epyenv/bin\x1e/opt/homebrew/opt/rustup/bin\x1e/Users/jam/Library/Python/3\x2e12/bin\x1e/Users/jam/\x2ebun/bin\x1e/opt/homebrew/opt/ssh\x2dcopy\x2did/bin\x1e/Users/jam/\x2espicetify\x1e/Users/jam/go/bin\x1e/Users/jam/go\x1e/opt/homebrew/opt/postgresql\x4015/bin\x1e/opt/homebrew/sbin\x1e/opt/homebrew/opt/openjdk/bin\x1e/opt/homebrew/opt/openjdk\x4011/bin\x1e/Users/jam/\x2ecargo/bin\x1e/Users/jam/Library/Android/Sdk/emulator\x1e/Users/jam/Library/Android/Sdk/platform\x2dtools\x1e/opt/homebrew/bin\x1e/opt/homebrew/opt/fzf/bin
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute

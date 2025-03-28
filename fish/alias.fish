@@ -235,11 +235,7 @@ abbr -a rd rmdir
 abbr -a run-help man
 abbr -a showfiles 'defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 abbr -a sshconf 'nvim ~/.ssh/config'
-abbr -a sst 'sudo '\''/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'\'
 abbr -a st subl
-abbr -a stn create_project
-abbr -a stp find_project
-abbr -a stt 'subl .'
 abbr -a subl \''/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'\'
 abbr -a tbconf 'nvim /Users/jam/Library/Application Support/MTMR/items.json'
 abbr -a which-command whence
@@ -257,7 +253,6 @@ abbr dcdv docker compose down -v
 abbr proj Projects
 abbr doxit docker exec -it
 abbr cpp clang++
-abbr python python3
 abbr py python3
 abbr ipy ipython3
 abbr pn pnpm
@@ -265,8 +260,20 @@ abbr pnx pnpx
 abbr dps docker ps
 abbr dorit docker run --rm -it
 abbr ef exec fish
-abbr dln docker ps -l --format='{{.Names}}'
+abbr dpln docker ps -l --format='{{.Names}}'
 abbr cl clear
 abbr act act --container-architecture linux/amd64
 abbr lg lazygit
 abbr pc pre-commit
+abbr do docker
+abbr jb just build
+abbr jc just clean
+abbr jr just run
+abbr ojt 'oj t -c "go run ."'
+abbr cat bat
+abbr ggt go get
+abbr olm ollama
+abbr pa poetry add
+abbr pi poetry install
+abbr pr poetry run
+abbr docl docker container ls

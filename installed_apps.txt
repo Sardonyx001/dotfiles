@@ -1,0 +1,103 @@
+.rw-r--r--@ 27k jam  27 Mar 11:55 .DS_Store
+drwxr-xr-x@   - root  2 Jun  2023 .Karabiner-VirtualHIDDevice-Manager.app
+.rw-r--r--    0 root  6 Mar 19:06 .localized
+drwxr-xr-x@   - jam  19 Mar 22:08 1Password.app
+drwxr-xr-x@   - jam  31 Aug  2023 ActivityWatch.app
+drwxr-xr-x@   - root 28 Nov  2024 'Adobe Photoshop 2023'
+drwxrwxr-x@   - root  4 Jun  2023 'Adobe Premiere Pro 2022'
+drwxr-xr-x@   - root 27 Mar 21:50 Agenda.app
+drwxr-xr-x@   - jam   7 Oct  2024 Alexandria.app
+drwxr-xr-x@   - jam  27 Mar 22:25 AltTab.app
+drwxr-xr-x@   - root 25 Mar 21:47 'Amazon Kindle.app'
+drwxr-xr-x@   - jam  15 Mar 07:21 'Amazon Q.app'
+drwxr-xr-x@   - jam  23 Nov  2024 'Android Studio.app'
+drwxr-xr-x@   - root 25 Mar 21:38 Anydo.app
+drwxr-xr-x@   - jam  27 Mar 22:27 Arc.app
+drwxr-xr-x@   - root 31 Mar 04:02 Audible.app
+drwxr-xr-x@   - root 16 Mar 20:22 Bitwarden.app
+drwxr-xr-x@   - jam  29 Mar 21:26 'Brave Browser.app'
+drwxr-xr-x@   - jam  28 Mar 15:47 Bruno.app
+drwxrwxr-x    - root  1 Sep  2023 CAI
+drwxr-xr-x@   - jam  24 Sep  2022 CheatSheet.app
+drwxr-xr-x@   - jam  12 Oct  2024 Chromium.app
+drwxr-xr-x@   - jam  25 Jan  2022 cool-retro-term.app
+drwxr-xr-x@   - jam   4 Nov  2024 CurseForge.app
+drwxr-xr-x@   - jam  24 Mar 11:35 Discord.app
+drwxr-xr-x@   - jam  18 Dec  2024 Docker.app
+drwxr-xr-x@   - jam  19 Dec  2023 Doll.app
+drwxr-xr-x@   - jam  28 Sep  2021 Dynalist.app
+drwxr-xr-x@   - jam  29 Oct  2024 Element.app
+drwxr-xr-x@   - root 31 May  2024 'ESET Cyber Security Pro.app'
+drwxr-xr-x@   - jam  15 Nov  2024 Figma.app
+drwxr-xr-x@   - jam   9 Jan  2024 Firefox.app
+drwxr-xr-x@   - jam  17 May  2023 Flux.app
+drwxr-xr-x@   - jam  25 Mar 11:05 Ghostty.app
+drwxr-xr-x@   - root 21 Mar 08:20 'Google Chrome.app'
+drwxr-xr-x    - root 13 Mar 20:07 'Google Docs.app'
+drwxrwxr-x    - root 13 Mar 20:07 'Google Drive.app'
+drwxr-xr-x    - root 13 Mar 20:07 'Google Sheets.app'
+drwxr-xr-x    - root 13 Mar 20:07 'Google Slides.app'
+drwxr-xr-x@   - jam  15 Mar 04:35 Halloy.app
+drwxr-xr-x@   - root 21 Sep  2024 'Hand Mirror.app'
+drwxr-xr-x@   - jam  21 Jan  2022 'Hidden Bar.app'
+drwxr-xr-x@   - jam   7 Jan  2024 HTTPie.app
+drwxr-xr-x@   - jam   1 Jan 02:53 iTerm.app
+drwxr-xr-x@   - jam  31 Mar 14:27 Itsycal.app
+lrwxr-xr-x@   - jam   9 May  2024 JDownloader2.app -> '/Users/jam/bin/JDownloader 2'/JDownloader2.app
+drwxr-xr-x@   - root 27 Mar 22:22 Karabiner-Elements.app
+drwxr-xr-x@   - root 27 Mar 22:22 Karabiner-EventViewer.app
+drwxr-xr-x@   - jam   1 Jun  2023 kitty.app
+drwxr-xr-x@   - jam  16 Jan  2024 Lagrange.app
+drwxr-xr-x@   - root 29 Mar 03:06 LimeChat.app
+drwxr-xr-x@   - root 25 Mar 21:38 LINE.app
+drwxr-xr-x@   - jam   6 Feb  2022 love.app
+drwxr-xr-x@   - jam  12 Oct  2024 Maccy.app
+drwxr-xr-x@   - jam  18 Dec  2024 'Macs Fan Control.app'
+drwxr-xr-x@   - root  9 Feb 14:23 MenubarX.app
+drwxr-xr-x@   - jam  21 Mar 22:26 Messenger.app
+drwxrwxr-x@   - root 19 Mar 22:32 'Microsoft Excel.app'
+drwxrwxr-x@   - root 19 Mar 22:30 'Microsoft PowerPoint.app'
+drwxr-xr-x@   - root 13 Jan  2024 'Microsoft Teams classic.app'
+drwxrwxr-x@   - root 21 Mar 12:00 'Microsoft Word.app'
+drwxr-xr-x@   - jam   9 Sep  2023 MonitorControl.app
+drwxr-xr-x@   - jam   6 Oct  2024 mpv.app
+drwxr-xr-x@   - jam  20 Nov  2020 MTMR.app
+drwxr-xr-x@   - jam  28 Sep  2023 NearDrop.app
+.rwxr-xr-x@ 26M jam  11 May  2023 ngrok
+drwxr-xr-x@   - jam   6 Feb 18:58 Notion.app
+drwxr-xr-x@   - jam   4 Jun  2021 NZBGet.app
+drwxr-xr-x@   - jam  18 Jul  2024 Obsidian.app
+drwxr-xr-x    - jam  18 Mar 05:17 Ollama.app
+drwxr-xr-x@   - jam  27 Jul  2024 Pile.app
+drwxr-xr-x@   - root 25 Mar 21:37 'Prime Video.app'
+drwxr-xr-x@   - root 31 May  2023 'Python 3.11'
+drwxr-xr-x@   - jam  24 Sep  2024 Raindrop.io.app
+drwxr-xr-x@   - jam  27 Mar 20:28 Raycast.app
+drwxr-xr-x@   - jam  10 Jun  2023 Rectangle.app
+drwxr-xr-x@   - jam  23 Aug  2024 Research.app
+drwxr-xr-x@   - jam  29 Mar 00:29 Rio.app
+lrwxr-xr-x@   - root  6 Mar 19:06 Safari.app -> ../System/Cryptexes/App/System/Applications/Safari.app
+drwxr-xr-x@   - jam  30 Jan 01:14 Slack.app
+drwxr-xr-x    - jam  26 Mar 18:28 Spotify.app
+drwxr-xr-x@   - jam  20 Sep  2024 Stats.app
+drwxr-xr-x@   - jam   1 Dec  2023 'Sublime Text.app'
+drwxr-xr-x    - jam  11 Jun  2024 TablePlus.app
+drwxr-xr-x@   - jam  23 Dec  2024 Telegram.app
+drwxr-xr-x@   - jam  28 Oct  2021 TempBox.app
+drwxr-xr-x@   - jam   6 Feb 06:44 Textual.app
+drwxr-xr-x@   - jam  29 Jan  2024 'TOEIC Secure Browser .app'
+drwxr-xr-x@   - root 16 Mar 19:08 'Toggl Track.app'
+drwxr-xr-x@   - jam  19 Dec  2019 TouchbarPet.app
+drwxr-xr-x@   - jam  29 May  2024 Transmission.app
+drwxr-xr-x    - root 27 Mar 22:21 Utilities
+drwxr-xr-x@   - jam  29 Mar 14:17 Viber.app
+drwxr-xr-x@   - jam  13 Mar 06:15 'Visual Studio Code.app'
+drwxr-xr-x@   - jam  22 Mar 20:30 WakaTime.app
+drwxr-xr-x@   - jam   4 Feb  2024 WezTerm.app
+drwxr-xr-x@   - jam  27 Mar 22:16 WhatsApp.app
+drwxr-xr-x@   - root 21 Jun  2024 WireGuard.app
+drwxr-xr-x@   - jam   5 Sep  2023 Wireshark.app
+drwxr-xr-x@   - root 15 Dec  2024 Xcode.app
+drwxr-xr-x@   - jam  16 Jul  2020 XcodeClangFormat.app
+drwxr-xr-x@   - jam  11 Feb 06:00 Zed.app
+drwxr-xr-x@   - root  3 Oct  2024 zoom.us.app

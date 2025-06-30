@@ -26,62 +26,147 @@ hs.wifi.watcher
 	end)
 	:start()
 
--- Define a hotkey to trigger the screen swap (e.g., Ctrl+Alt+Cmd+,)
-hs.hotkey.bind({ "ctrl", "alt", "cmd" }, ",", function()
-	-- Step 1: Get all connected screens
-	local allScreens = hs.screen.allScreens()
+-- Precompute displays once at startup
+local displays = {
+	builtin = nil,
+	left = nil,
+	right = nil,
+	all = {},
+}
+
+-- Function to update display cache
+local function updateDisplays()
+	local screens = hs.screen.allScreens()
 	local externalScreens = {}
 
-	-- Filter for external monitors
-	for _, s in ipairs(allScreens) do
-		if s:isExternal() then
-			table.insert(externalScreens, s)
+	displays.all = screens
+
+	for _, screen in ipairs(screens) do
+		if screen:name():match("Built%-in") then
+			displays.builtin = screen
+		else
+			table.insert(externalScreens, screen)
 		end
 	end
 
-	-- Step 2: Validate that exactly two external monitors are found
-	if #externalScreens ~= 2 then
-		hs.notification
-			.new({
-				title = "Hammerspoon Screen Swap",
-				informativeText = "Requires exactly two external monitors to be connected for this swap script.",
-			})
-			:send()
+	-- Sort external screens by x-coordinate
+	if #externalScreens >= 2 then
+		table.sort(externalScreens, function(a, b)
+			return a:frame().x < b:frame().x
+		end)
+		displays.left = externalScreens[1]
+		displays.right = externalScreens[2]
+	elseif #externalScreens == 1 then
+		displays.left = externalScreens[1]
+		displays.right = nil
+	end
+end
+
+-- Update displays on startup
+updateDisplays()
+
+-- Watch for display changes
+local screenWatcher = hs.screen.watcher.new(updateDisplays)
+screenWatcher:start()
+
+-- Alternative smoother version without hide/unhide
+local function swapDisplays(screen1, screen2)
+	if not screen1 or not screen2 then
+		hs.alert.show("Both displays must be available")
 		return
 	end
 
-	-- Step 3: Sort screens by their X coordinate to identify left and right
-	table.sort(externalScreens, function(a, b)
-		return a:frame().x < b:frame().x
-	end)
+	local frame1 = screen1:frame()
+	local frame2 = screen2:frame()
 
-	local leftScreen = externalScreens[1]
-	local rightScreen = externalScreens[2]
+	-- Get all windows at once
+	local allWindows = hs.window.orderedWindows()
+	local windowMoves = {}
 
-	-- Step 4: Get the frontmost window on each identified screen
-	local windowOnLeft = leftScreen:frontmostWindow()
-	local windowOnRight = rightScreen:frontmostWindow()
-
-	-- Step 5: Validate that frontmost windows exist on both screens
-	if not windowOnLeft or not windowOnRight then
-		hs.notify
-			.new({
-				title = "Hammerspoon Screen Swap",
-				informativeText = "Could not find frontmost windows on both external monitors. Make sure applications are active on both.",
-			})
-			:send()
-		return
+	-- Helper to check if window is maximized
+	local function isMaximized(windowFrame, screenFrame)
+		local threshold = 10
+		return math.abs(windowFrame.x - screenFrame.x) < threshold
+			and math.abs(windowFrame.y - screenFrame.y) < threshold
+			and math.abs(windowFrame.w - screenFrame.w) < threshold
+			and math.abs(windowFrame.h - screenFrame.h) < threshold
 	end
 
-	-- Step 6: Swap the windows between the screens
-	-- The 'true' argument preserves the window's relative size and position on the new screen.
-	windowOnLeft:moveToScreen(rightScreen, true)
-	windowOnRight:moveToScreen(leftScreen, true)
+	-- Process all windows
+	for _, window in ipairs(allWindows) do
+		if window:isVisible() and window:isStandard() then
+			local windowScreen = window:screen()
+			local currentFrame = window:frame()
 
-	hs.notify
-		.new({
-			title = "Hammerspoon Screen Swap",
-			informativeText = "Windows swapped between external monitors.",
-		})
-		:send()
+			if windowScreen == screen1 then
+				if isMaximized(currentFrame, frame1) then
+					table.insert(windowMoves, { window = window, frame = frame2 })
+				else
+					local relativeX = (currentFrame.x - frame1.x) / frame1.w
+					local relativeY = (currentFrame.y - frame1.y) / frame1.h
+					local relativeW = currentFrame.w / frame1.w
+					local relativeH = currentFrame.h / frame1.h
+
+					table.insert(windowMoves, {
+						window = window,
+						frame = {
+							x = frame2.x + (relativeX * frame2.w),
+							y = frame2.y + (relativeY * frame2.h),
+							w = relativeW * frame2.w,
+							h = relativeH * frame2.h,
+						},
+					})
+				end
+			elseif windowScreen == screen2 then
+				if isMaximized(currentFrame, frame2) then
+					table.insert(windowMoves, { window = window, frame = frame1 })
+				else
+					local relativeX = (currentFrame.x - frame2.x) / frame2.w
+					local relativeY = (currentFrame.y - frame2.y) / frame2.h
+					local relativeW = currentFrame.w / frame2.w
+					local relativeH = currentFrame.h / frame2.h
+
+					table.insert(windowMoves, {
+						window = window,
+						frame = {
+							x = frame1.x + (relativeX * frame1.w),
+							y = frame1.y + (relativeY * frame1.h),
+							w = relativeW * frame1.w,
+							h = relativeH * frame1.h,
+						},
+					})
+				end
+			end
+		end
+	end
+
+	-- Disable animations
+	local animationDuration = hs.window.animationDuration
+	hs.window.animationDuration = 0
+
+	-- Execute all moves at once
+	for _, move in ipairs(windowMoves) do
+		move.window:setFrame(move.frame)
+	end
+
+	-- Restore animations
+	hs.window.animationDuration = animationDuration
+
+	-- Quick flash
+	hs.alert.show("↔", 0.5)
+end
+
+-- Swap left and right external monitors
+hs.hotkey.bind({ "ctrl", "cmd", "alt" }, ".", function()
+	swapDisplays(displays.left, displays.right)
+end)
+
+-- Swap built-in and left external
+hs.hotkey.bind({ "ctrl", "cmd", "alt" }, ",", function()
+	swapDisplays(displays.builtin, displays.left)
+end)
+
+-- Swap built-in and right external
+hs.hotkey.bind({ "ctrl", "cmd", "alt" }, "/", function()
+	swapDisplays(displays.builtin, displays.right)
 end)

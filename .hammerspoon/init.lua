@@ -7,8 +7,19 @@ local function open(name)
 	end
 end
 
+local function directoryLaunchKeyRemap(mods, key, dir)
+	local mods = mods or {}
+	hs.hotkey.bind(mods, key, function()
+		local shell_command = "open " .. dir
+		hs.execute(shell_command)
+	end)
+end
+
 --- Finder hotkey
 hs.hotkey.bind({ "alt" }, "E", open("Finder"))
+
+-- Bind Cmd + Alt + O to open the directory in Finder
+directoryLaunchKeyRemap({ "alt" }, "D", "~/Downloads/")
 
 -- When connected to work Wifi, mute the computer to avoid awkward moment
 local workWifi = "r-intra"

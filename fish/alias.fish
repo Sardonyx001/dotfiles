@@ -267,7 +267,6 @@ abbr lg lazygit
 abbr pc pre-commit
 abbr do docker
 abbr jb just build
-abbr jc just clean
 abbr jr just run
 abbr ojt 'oj t -c "go run ."'
 abbr cat bat
@@ -276,4 +275,23 @@ abbr olm ollama
 abbr pa poetry add
 abbr pi poetry install
 abbr pr poetry run
-abbr docl docker container ls
+abbr pls podman container ls
+abbr pps podman ps
+abbr pm podman
+abbr pms podman stop
+abbr leetcode 'podman run -it --rm --arch amd64 skygragon/leetcode-cli'
+abbr vc 'nvim ~/.config/'
+abbr va "nvim ~/.config/fish/alias.fish"
+abbr lc leetcode
+abbr sshlogin 'ssh lassouedjame01@stg-login101z-jpe1.stg.jp.local'
+abbr c pbcopy
+abbr kj 'kill (jobs -p)'
+abbr o open
+abbr ghc 'gh copilot'
+abbr fdd 'fd . ~/Downloads -tf -X ls -1t | gum choose'
+abbr fdd1h 'fd . ~/Downloads -tf --newer 1h -X ls -1t | gum choose'
+abbr -a B --position anywhere --set-cursor "% | bat"
+abbr bi 'brew install'
+abbr d 'cd ~/Downloads'
+abbr p 'cd ~/wip'
+abbr t 'cd ~/work'

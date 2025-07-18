@@ -39,15 +39,15 @@ return {
           key = "f",
         },
         {
-          desc = "  home",
+          desc = "💼 work",
           group = "DiagnosticHint",
-          action = "cd ~/Projects | Neotree",
+          action = "cd ~/work | Neotree",
           key = "h",
         },
         {
           desc = "🚧 wip",
           group = "DiagnosticHint",
-          action = "cd ~/Projects/wip | Neotree",
+          action = "cd ~/wip | Neotree",
           key = "w",
         },
         {

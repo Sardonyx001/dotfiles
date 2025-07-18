@@ -62,7 +62,16 @@ return {
   opts = {
     inlay_hints = { enabled = true },
     servers = {
-      bashls = {
+      lua_ls = { -- add `vim` and `hs` to globals to suppress `undefined global` warning
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim", "hs", "lazygit" },
+            },
+          },
+        },
+      },
+      bashls = { --  allow bashls to read .venv files
         handlers = {
           ["textDocument/publishDiagnostics"] = function(err, res, ...)
             local file_name = vim.fn.fnamemodify(vim.uri_to_fname(res.uri), ":t")
@@ -73,7 +82,7 @@ return {
           end,
         },
       },
-      pyright = {
+      pyright = { -- allow pyright to read poetry .venv
         capabilities = (function()
           local capabilities = vim.lsp.protocol.make_client_capabilities()
           capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
@@ -92,10 +101,20 @@ return {
           },
         },
       },
-      ruff_lsp = {
-        on_attach = function(client, _)
-          client.server_capabilities.hoverProvider = false
-        end,
+      -- ruff_lsp = { -- disable ruff
+      --   on_attach = function(client, _)
+      --     client.server_capabilities.hoverProvider = false
+      --   end,
+      -- },
+      jdtls = {
+        settings = {
+          java = {
+            diagnostics = {
+              enabled = true, -- Enable diagnostics
+              showInCodeLens = true, -- Optional, shows diagnostics in code lens
+            },
+          },
+        },
       },
     },
   },
